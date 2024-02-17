@@ -2,12 +2,16 @@ package hello.core.order;
 
 import hello.core.discount.DisCountPolicy;
 import hello.core.member.Member;
+import hello.core.member.MemberRepository;
 
 public class OrderServiceImpl implements OrderService {
+    private final DisCountPolicy disCountPolicy;
+    private final MemberRepository memberRepository;
 
-    //    private final MemberRepository memberRepository = new MemoryMemberRepository();
-//    private final DisCountPolicy disCountPolicy = new FixDiscountPolicy();
-    private DisCountPolicy disCountPolicy;
+    public OrderServiceImpl(MemberRepository memberRepository, DisCountPolicy disCountPolicy) {
+        this.memberRepository = memberRepository;
+        this.disCountPolicy = disCountPolicy;
+    }
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
