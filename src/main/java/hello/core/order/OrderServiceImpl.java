@@ -13,7 +13,7 @@ public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
 
     @Autowired
-    public OrderServiceImpl(@Qualifier("MemberRepository") MemberRepository memberRepository, DisCountPolicy disCountPolicy) {
+    public OrderServiceImpl(@Qualifier("memoryMemberRepository") MemberRepository memberRepository, DisCountPolicy disCountPolicy) {
         this.memberRepository = memberRepository;
         this.disCountPolicy = disCountPolicy;
     }

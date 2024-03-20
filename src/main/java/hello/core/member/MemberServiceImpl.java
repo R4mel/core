@@ -10,7 +10,7 @@ public class MemberServiceImpl implements MemberService{
     private final MemberRepository memberRepository;
 
     @Autowired // ac.getBean(MemberRepository.class)
-    public MemberServiceImpl(@Qualifier("MemberRepository") MemberRepository memberRepository) {
+    public MemberServiceImpl(@Qualifier("memoryMemberRepository") MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
 
