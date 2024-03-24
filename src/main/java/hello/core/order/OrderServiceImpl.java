@@ -12,7 +12,7 @@ public class OrderServiceImpl implements OrderService {
     private final DisCountPolicy disCountPolicy;
     private final MemberRepository memberRepository;
 
-    @Autowired
+    @Autowired // 생성자가 1개일때는 자동으로 @Autowired를 생략해도 자동 주입된다. 스프링 빈에서만 해당된다.
     public OrderServiceImpl(@Qualifier("memoryMemberRepository") MemberRepository memberRepository, DisCountPolicy disCountPolicy) {
         this.memberRepository = memberRepository;
         this.disCountPolicy = disCountPolicy;
