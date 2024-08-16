@@ -7,7 +7,7 @@ import hello.core.member.MemberRepository;
 public class OrderServiceImpl implements OrderService {
 
     //    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
-//    private final DiscountPolicy discountPolicy = new RateDiscountPolicy(); // DIP, OCP 위반!!
+    //    private final DiscountPolicy discountPolicy = new RateDiscountPolicy(); // DIP, OCP 위반!!
 
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
